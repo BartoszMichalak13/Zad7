@@ -1,0 +1,21 @@
+digraph "P1" {
+
+splines  = ortho;
+fontname = "Inconsolata";
+
+node [colorscheme = ylgnbu4];
+edge [colorscheme = dark28, dir = both];
+
+Guests    [shape = record, label = "{ Guests | + Guests() : \l|+ zakup(int) : void\l }"];
+Main      [shape = record, label = "{ Main | + Main() : \l|+ main(String[]) : void\l }"];
+Stuff     [shape = record, label = "{ Stuff | + Stuff() : \l|+ zooinfo(int, int) : void\l }"];
+ptaki     [shape = record, label = "{ ptaki | + ptaki() : \l|+ wypiszptaki() : void\l }"];
+ssaki     [shape = record, label = "{ ssaki | + ssaki() : \l|+ wypiszssaki() : void\l }"];
+zwierzeta [shape = record, label = "{ zwierzeta | + zwierzeta() : \l|+ wypiszzwierzeta() : void\l }"];
+
+ptaki     -> zwierzeta [color = "#000082", style = solid , arrowtail = none    , arrowhead = normal  , taillabel = "", label = "", headlabel = ""];
+ptaki     -> zwierzeta [color = "#820000", style = solid , arrowtail = odot    , arrowhead = none    , taillabel = "", label = "", headlabel = ""];
+ssaki     -> zwierzeta [color = "#820000", style = solid , arrowtail = odot    , arrowhead = none    , taillabel = "", label = "", headlabel = ""];
+ssaki     -> zwierzeta [color = "#000082", style = solid , arrowtail = none    , arrowhead = normal  , taillabel = "", label = "", headlabel = ""];
+
+}
